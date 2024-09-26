@@ -50,6 +50,20 @@ func (m *IedModel) CreateLogicalDevice(name string) *LogicalDevice {
 	}
 }
 
+// GetModelNodeByObjectReference
+func (m *IedModel) GetModelNodeByObjectReference(objectReference string) *DataAttribute {
+	return  &DataAttribute{
+		attribute: (*C.DataAttribute)(unsafe.Pointer(C.IedModel_getModelNodeByObjectReference(m.model, C.CString(objectReference)))),
+	}
+}
+
+// GetModelNodeByShortAddress
+func (m *IedModel) GetModelNodeByShortAddress(addr uint32) *DataAttribute {
+	return  &DataAttribute{
+		attribute: (*C.DataAttribute)(unsafe.Pointer(C.IedModel_getModelNodeByShortAddress(m.model, C.uint32_t(addr)))),
+	}
+}
+
 type LogicalNode struct {
 	node *C.LogicalNode
 }
