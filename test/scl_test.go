@@ -3,7 +3,7 @@ package test
 import (
 	"testing"
 
-	"github.com/wendy512/iec61850/scl_xml"
+	"github.com/sorahkasugano/iec61850/scl_xml"
 )
 
 func TestLoadIcdXml(t *testing.T) {

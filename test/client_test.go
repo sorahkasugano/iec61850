@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/wendy512/iec61850"
+	"github.com/sorahkasugano/iec61850"
 )
 
 const (
